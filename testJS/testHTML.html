@@ -1,0 +1,32 @@
+<html>
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 200px;
+            height: 100px;
+        }
+
+        div {
+            line-height: 100px;
+            font-size: 42px;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+        function changeSearchText(){
+            bg = chrome.extension.getBackgroundPage();
+            myTitle = bg.querySelector('#su');
+            myTitle.value = 'All Hail Andy';
+        }
+    </script>
+</head>
+<body>
+<div id="background_page">test</div>
+<button onclick="changeSearchText()">test background page</button>
+</body>
+</html>
