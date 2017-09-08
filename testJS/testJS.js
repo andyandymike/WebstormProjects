@@ -2,13 +2,13 @@
  * Created by I067382 on 8/24/2016.
  */
 
-var i;
-var cars = new Array();
-cars[0] = "Audi";
-cars[1] = "BMW";
-cars[2] = "Volvo";
-
-for (i=0;i<cars.length;i++)
-{
-    document.write(cars[i] + "<br>");
+function msgAfterTimeout (msg, who, timeout) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => resolve(`${msg} Hello ${who}!`), timeout)
+    })
 }
+msgAfterTimeout("", "Foo", 100).then((msg) =>
+    msgAfterTimeout(msg, "Bar", 200)
+).then((msg) => {
+    console.log(`done after 300ms:${msg}`)
+})

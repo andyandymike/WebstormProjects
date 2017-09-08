@@ -2,8 +2,10 @@
   "name": "testjs",
   "version": "1.0.0",
   "description": "",
-  "main": "testJS.js",
-  "dependencies": {},
+  "main": "testExpress.js",
+  "dependencies": {
+    "express": "^4.15.4"
+  },
   "devDependencies": {
     "grunt": "^1.0.1"
   },
